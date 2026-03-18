@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --accent:   #6366f1;
+  --accent-2: #a855f7;
+  --accent-3: #ec4899;
+  --success:  #10b981;
+  --danger:   #ef4444;
+
+  --grad: linear-gradient(135deg,#6366f1,#a855f7,#ec4899);
+  --grad-2: linear-gradient(135deg,#4f46e5,#7c3aed);
+
+  --text-1: #0a0f2e;
+  --text-2: #334155;
+  --text-3: #64748b;
+  --text-4: #94a3b8;
+
+  --glass:       rgba(255,255,255,0.52);
+  --glass-heavy: rgba(255,255,255,0.78);
+  --border:      rgba(255,255,255,0.82);
+  --border-sub:  rgba(255,255,255,0.4);
+
+  --shadow-card: 0 1px 0 rgba(255,255,255,1) inset,
+                 0 24px 48px rgba(99,102,241,0.14),
+                 0 8px 20px rgba(0,0,0,0.08);
+  --shadow-sm:   0 4px 12px rgba(0,0,0,0.07);
+
+  --r-sm: 12px; --r-md: 20px; --r-lg: 28px; --r-xl: 36px;
+
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; background: #eef2ff; color: var(--text-1); overflow-x: hidden; }
+h1,h2,h3,h4,h5,h6 { font-family:'Space Grotesk',sans-serif; letter-spacing:-0.03em; line-height:1.15; }
+button { font-family: inherit; }
+
+/* ── Mesh BG ── */
+.mesh-bg { position:fixed; inset:0; z-index:0; background:#eef2ff; overflow:hidden; }
+.mesh-blob { position:absolute; border-radius:50%; filter:blur(90px); will-change:transform; }
+.blob-1 { width:700px;height:700px; background:radial-gradient(circle,rgba(99,102,241,.5) 0%,transparent 70%); top:-15%;left:-10%; animation:drift1 18s ease-in-out infinite alternate; }
+.blob-2 { width:800px;height:800px; background:radial-gradient(circle,rgba(168,85,247,.4) 0%,transparent 70%); bottom:-20%;right:-15%; animation:drift2 22s ease-in-out infinite alternate; }
+.blob-3 { width:550px;height:550px; background:radial-gradient(circle,rgba(236,72,153,.35) 0%,transparent 70%); top:35%;left:45%; animation:drift3 16s ease-in-out infinite alternate; }
+.blob-4 { width:600px;height:600px; background:radial-gradient(circle,rgba(56,189,248,.3) 0%,transparent 70%); top:-5%;right:15%; animation:drift4 25s ease-in-out infinite alternate; }
+.blob-5 { width:400px;height:400px; background:radial-gradient(circle,rgba(16,185,129,.28) 0%,transparent 70%); bottom:10%;left:20%; animation:drift1 20s ease-in-out infinite alternate-reverse; }
+@keyframes drift1{0%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,12%) scale(1.15)}100%{transform:translate(-5%,6%) scale(.92)}}
+@keyframes drift2{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-10%,-8%) scale(1.1)}100%{transform:translate(6%,-12%) scale(.95)}}
+@keyframes drift3{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-8%,10%) scale(1.2)}100%{transform:translate(10%,-5%) scale(.88)}}
+@keyframes drift4{0%{transform:translate(0,0) scale(1)}50%{transform:translate(12%,6%) scale(1.08)}100%{transform:translate(-6%,10%) scale(1.05)}}
